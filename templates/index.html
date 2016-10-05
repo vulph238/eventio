@@ -1,0 +1,34 @@
+<!doctype html>
+<head>
+  <title>Eventio</title>
+</head>
+<body>
+  <h1>Eventio</h1>
+  <h2> Events List</h2>
+
+{% for event in events %}
+
+
+  <div class="">
+    <h3>{{ event.name }}</h3>
+
+      {% if event.capacity %}
+          <p>
+      Capacity: {{ event.capacity }}
+          </p>
+      {% endif %}
+
+<p>
+{{ event.description }}
+</p>
+<dl class="">
+  <dt>when is it </dt>
+  <dd>{{ event.start_time }}</dd>
+  <dt>where</dt>
+  <dd>{{ event.location }}</dd>
+  <dt>price</dt>
+<dd>{{ event.price }}</dd>
+
+</dl>
+</div>
+{% endfor %}
